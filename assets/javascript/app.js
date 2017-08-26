@@ -2,10 +2,15 @@
 // Rutgers Coding Bootcamp 
 // Homework Assignment 5 - Trivia Game
 
-$(document).ready(function() {
+$('body').ready(function() {
 
 $('#message').text('Click the button below to Start the Game!');
 
+// Glowing Buttons Function
+  var glower = $('.myGlower');
+    window.setInterval(function() {  
+      glower.toggleClass('active');
+    }, 700);
 
     // Show only New Game info on page load
   $('.game').hide();
@@ -22,15 +27,13 @@ $('#message').text('Click the button below to Start the Game!');
   var timeout;
   var i = 0;
 
+    // Questions 
+
   var activeQuestion = {
     question: "",
     answer: '',
     choices: [],
   }
-
-  // Questions 
-    // Possible Answers
-    // Correct Answer
 
   // This will be filled in during New Game function and emptied out throughout the game
   var questions = {};
@@ -114,10 +117,9 @@ $('#message').text('Click the button below to Start the Game!');
       $('.results').show();
       $('.correct').html('Number Correct: ' + correct);
       $('.wrong').html('Number Incorrect: ' + wrong);
-      $('#message').hide();
       activeQuestion = false;
     };
-  };
+  }
 
   // Check if selected answer is correct or incorrect
   function answerCheck() {
@@ -177,13 +179,13 @@ $('#message').text('Click the button below to Start the Game!');
       i=0;
 
       //Create buttons for possible answers
-      $(activeQuestion.choices).each(function() {
+      
       $('.option1').text(activeQuestion.choices[0]);
       $('.option2').text(activeQuestion.choices[1]);
       $('.option3').text(activeQuestion.choices[2]);
       $('.option4').text(activeQuestion.choices[3]);
       i++;
-      });
+      
     }; 
 
     // When you click on a possible answer
@@ -193,12 +195,6 @@ $('#message').text('Click the button below to Start the Game!');
         clearTimeout(timeout);
       });
   };
-
-  // Glowing Buttons Function
-  var glower = $('.myGlower');
-    window.setInterval(function() {  
-      glower.toggleClass('active');
-    }, 700);
 
    // New Game Function
     // Resets score to zero
@@ -212,6 +208,7 @@ $('#message').text('Click the button below to Start the Game!');
     $('.game').show();
   }
 
+  // StartGame Function
   $(".startGame").on('click', function(){
     $('#myCarousel').hide();
     $('#startGameButton').hide();
@@ -222,6 +219,8 @@ $('#message').text('Click the button below to Start the Game!');
     game();
   });
 
+
+  // Reset Game Function
   $("#resetGameButton").on('click', function(){
     $('#startGameButton').hide();
     $('#resetGameButton').hide();
