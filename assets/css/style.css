@@ -1,0 +1,123 @@
+/*William Rainaud
+  Rutgers Coding Bootcamp 
+  Homework Assignment 5 - Trivia Game */
+
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One|Passion+One');
+
+html {
+  max-height: none;
+  height: 100%;
+  -webkit-text-size-adjust: none;
+}
+
+body {
+	max-height: none;
+  	height: 100%;
+	background:url('../images/nsx_1.jpg') 0 0 no-repeat;
+	overflow-x:hidden;
+    background-size: cover;
+	font-family:'Roboto',Open Sans;
+	margin: 15px;
+}
+
+h1 {
+	font-size: 60px;
+	margin-top: 30px;
+	margin-bottom: 0px;
+	color: #fff;
+	text-align: center;	
+	font-family: 'Passion One', cursive;
+	letter-spacing: 1px;
+	color: #d70909;
+}
+
+h2, h3{
+	font-family: 'Fjalla One', sans-serif;
+	color: #fcf8f8;
+	margin-bottom: 40px;
+	text-align: center;
+} 
+
+h4 {
+	font-family: 'Fjalla One', sans-serif;
+	color: #d70909;
+	margin-bottom: 40px;
+}
+
+p {
+	font-family: 'Fjalla One', sans-serif;
+}
+
+#startGameButton{
+	margin-bottom: 40px;
+}
+
+
+div.question{
+	font-size: 30px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	text-align: center;	
+	font-family: 'Fjalla One', sans-serif;
+	letter-spacing: 1px;
+	color: #fff;
+
+}
+
+.option{
+	margin: 8px;
+	font-family: 'Fjalla One', sans-serif;
+
+}
+
+.answers.h2{
+	font-family: 'Fjalla One', sans-serif;
+	color: #fcf8f8;
+	text-align: center;
+
+}
+
+.timeLeft{
+	font-size: 30px;
+	text-align: center;	
+	font-family: 'Fjalla One', sans-serif;
+	letter-spacing: 1px;
+	color: #fff;
+}
+
+a {
+	text-decoration:none;
+	color: #fff;
+}
+
+a:hover {
+	text-decoration:none;
+	color: #d70909;
+}
+
+.myGlower {
+	letter-spacing: 5px;
+	font-family: 'Fjalla One', sans-serif;
+    background-color: #d9534f;
+    border: 1px solid transparent;    
+    -webkit-transition: border 0.3s linear, box-shadow 0.3s linear;
+       -moz-transition: border 0.3s linear, box-shadow 0.3s linear;
+            transition: border 0.3s linear, box-shadow 0.3s linear;
+}
+
+.myGlower.active {
+	font-family: 'Fjalla One', sans-serif;
+    border-color: #d9534f;
+    -webkit-box-shadow: 0 0 20px #d9534f;
+       -moz-box-shadow: 0 0 20px #d9534f;
+            box-shadow: 0 0 20px #d9534f;
+}
+
+
+footer{
+	font-family: 'Fjalla One', sans-serif;
+	color: #fff;
+	object-position: bottom;
+	padding-top: 30px;
+	padding-bottom: 10px;
+}
